@@ -1,4 +1,4 @@
-class CityTemperatureReporter
+class TemperatureReporter
 
 
 end

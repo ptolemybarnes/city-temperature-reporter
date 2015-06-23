@@ -4,3 +4,15 @@ This is a kata for thinking about how we might stub a program's call to an exter
 
 =)
 *Ptolemy*
+
+## Usage.
+
+Let's use IRB to sketch out the public interface of our classes. This seems to make sense to me:
+
+```pry
+pry(main)> london = TemperatureReporter.new city: 'London', data_source: Weatherman.new
+pry(main)> london.current_temperature
+=> 22
+```
+
+I am using Ruby's [keyword syntax](https://robots.thoughtbot.com/ruby-2-keyword-arguments)
