@@ -1,10 +1,17 @@
 require './lib/city_temperature_reporter'
 
-describe TemperatureReporter do
+describe CityTemperatureReporter do
 
   it 'requests its current temperature' do
-    # think about what TemperatureReporter needs to do its job
-    # How can you test that it makes this request? Use diagrams to help you visualise this
+    # SETUP
+    weatherman = double :weatherman
+    new_york   = CityTemperatureReporter.new('New York', weatherman)
+
+    # EXPECTATION ABOUT THE FUTURE
+    expect(weatherman).to receive(:get_temperature).with('New York')
+
+    # ACTION
+    new_york.temperature
   end
 
   it 'reports its current temperature' do
