@@ -9,7 +9,7 @@ class CityTemperatureReporter
 
   def temperature
     # make call to weatherman here
-    weatherman.get_temperature('New York')
+    weatherman.get_temperature city_name
   end
 
 
